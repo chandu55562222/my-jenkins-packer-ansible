@@ -2,10 +2,10 @@
     "variables":{
         "accesskey":"",
         "secretkey":"",
-        "sourceimage":"ami-0efb2d0b5d2f37e6b",
+        "sourceimage":"ami-0ad16744583f21877",
         "sshusername":"ubuntu",
         "currentregion":"us-west-1",
-        "aminame":"mypacker"
+        "aminame":"latest"
     },
 
    "Builders":[{
@@ -23,10 +23,10 @@
        {
         "type": "shell",
         "script": "./script.sh"
-   },
-   {
+       },
+       { 
        "type": "ansible-local",
        "playbook_file": "./playbook.yml"
-   }
+       }
    ]
 }
