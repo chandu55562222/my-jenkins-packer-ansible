@@ -1,0 +1,32 @@
+{
+    "variables":{
+        "accesskey":"",
+        "secretkey":"",
+        "sourceimage":"ami-09bfeda7337019518",
+        "sshusername":"ubuntu",
+        "currentregion":"us-west-2",
+        "aminame":"myubuntu"
+    },
+
+   "Builders":[{
+       "type":"amazon-ebs",
+       "access_key":"{{user `accesskey`}}",
+       "secret_key":"{{user `secretkey`}}",
+       "instance_type":"t2.micro",
+       "source_ami":"{{user `sourceimage`}}",
+       "ssh_username":"{{user `sshusername`}}",
+       "region": "{{user `currentregion`}}",
+       "ami_name":"{{user `aminame`}}"
+   }],
+
+   "provisioners":[
+       {
+        "type": "shell",
+        "script": "./script.sh"
+   },
+   {
+       "type": "ansible-local",
+       "playbook_file": "./playbook.yml"
+   }
+   ]
+}

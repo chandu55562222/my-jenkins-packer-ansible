@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: yes
+  vars:
+    package_name: tomcat7
+  tasks:
+    - name: updating packages
+      apt:
+        update_cache: yes
+    - name: installing apache on ubuntu
+      apt:
+        name: "{{package_name}}"
+        state: present
+    - name: restarting tomcat7
+      service:
+        name: "{{package_name}}"
+        state: restarted
