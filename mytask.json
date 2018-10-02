@@ -2,10 +2,10 @@
     "variables":{
         "accesskey":"",
         "secretkey":"",
-        "sourceimage":"ami-09bfeda7337019518",
+        "sourceimage":"ami-0efb2d0b5d2f37e6b",
         "sshusername":"ubuntu",
-        "currentregion":"us-west-2",
-        "aminame":"myubuntu"
+        "currentregion":"us-west-1",
+        "aminame":"mypacker"
     },
 
    "Builders":[{
