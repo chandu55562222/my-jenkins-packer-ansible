@@ -7,7 +7,7 @@
     - name: updating packages
       apt:
         update_cache: yes
-    - name: installing apache on ubuntu
+    - name: installingtomcat7 on ubuntu
       apt:
         name: "{{ package_name }}"
         state: present
